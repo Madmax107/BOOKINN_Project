@@ -1,0 +1,598 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E07C8846-8760-4226-96E1-953A8A3C63F3}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookInn</RootNamespace>
+    <AssemblyName>BookInn</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44380</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin_Master\Admin.aspx" />
+    <Content Include="Admin_Master\AdminHotel_details.aspx" />
+    <Content Include="Admin_Master\Admin_home.aspx" />
+    <Content Include="Admin_Master\Admin_hotels.aspx" />
+    <Content Include="Admin_Master\Admin_profile.aspx" />
+    <Content Include="Admin_Master\Admin_reg.aspx" />
+    <Content Include="Admin_Master\Facilities_details.aspx" />
+    <Content Include="Admin_Master\Facilities_page.aspx" />
+    <Content Include="Admin_Master\Pay_method.aspx" />
+    <Content Include="Admin_Master\Rooms_details.aspx" />
+    <Content Include="Admin_Master\Rooms_page.aspx" />
+    <Content Include="Admin_Master\Staff_details.aspx" />
+    <Content Include="Admin_Master\Staff_page.aspx" />
+    <Content Include="Admin_Master\Viewcustomer_booking.aspx" />
+    <Content Include="Admin_Master\Viewpayment_transaction.aspx" />
+    <Content Include="App_Data\BookInn.mdf" />
+    <Content Include="App_Data\BookInn_log.ldf">
+      <DependentUpon>BookInn.mdf</DependentUpon>
+    </Content>
+    <Content Include="Customer_Module\AboutUs_page.aspx" />
+    <Content Include="Customer_Module\Booking_page.aspx" />
+    <Content Include="Customer_Module\Booking_payment.aspx" />
+    <Content Include="Customer_Module\Browser.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\elegant-icons.css" />
+    <Content Include="css\flaticon.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\images\ui-icons_444444_256x240.png" />
+    <Content Include="css\images\ui-icons_555555_256x240.png" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\magnific-popup.css" />
+    <Content Include="css\nice-select.css" />
+    <Content Include="css\owl.carousel.min.css" />
+    <Content Include="css\slicknav.min.css" />
+    <Content Include="css\style.css" />
+    <Content Include="Customer_Module\Contact_page.aspx" />
+    <Content Include="Customer_Module\feedbackmessage.aspx" />
+    <Content Include="Customer_Module\Hotel_details.aspx" />
+    <Content Include="Customer_Module\Newoffer_page.aspx" />
+    <Content Include="Customer_Module\RoomSelect_page.aspx" />
+    <Content Include="Customer_Module\Thankyou_page.aspx" />
+    <Content Include="Customer_Module\user_profile.aspx" />
+    <Content Include="Customer_Module\Viewbooking_page.aspx" />
+    <Content Include="Images\10811.jpg" />
+    <Content Include="Images\2355148.jpg" />
+    <Content Include="Images\3039.jpg" />
+    <Content Include="Images\anime-flat-building-illustration.jpg" />
+    <Content Include="Images\group-business-people-having-meeting.jpg" />
+    <Content Include="Images\hotel10.jpg" />
+    <Content Include="Images\hotel11.jpg" />
+    <Content Include="Images\hotel12.jpg" />
+    <Content Include="Images\hotel13.jpg" />
+    <Content Include="Images\hotel14.jpg" />
+    <Content Include="Images\hotel15.jpg" />
+    <Content Include="Images\hotel16.jpg" />
+    <Content Include="Images\hotel3.jpg" />
+    <Content Include="Images\hotel4.jpg" />
+    <Content Include="Images\hotel5.jpg" />
+    <Content Include="Images\hotel6.jpg" />
+    <Content Include="Images\hotel7.jpg" />
+    <Content Include="Images\hotel8.jpg" />
+    <Content Include="Images\hotel9.jpg" />
+    <Content Include="Images\hotels.jpg" />
+    <Content Include="Images\Hotels_browser\grand-hyatt-mumbai-hotel.jpg" />
+    <Content Include="Images\Hotels_browser\kaldan-samudhra.jpg" />
+    <Content Include="Images\Hotels_browser\leena_mumbai.jpg" />
+    <Content Include="Images\Hotels_browser\Marriott_hotel.jpg" />
+    <Content Include="Images\Hotels_browser\sofitel-mumbai-bkc-a.jpg" />
+    <Content Include="Images\Hotels_browser\taj-mahal-palace-hotel-5-star-hotel-mumbai.jpg" />
+    <Content Include="Images\Hotels_browser\Taj_santacruz.jpg" />
+    <Content Include="Images\Hotels_browser\The_oberoi_mumbai.jpg" />
+    <Content Include="Images\Hotels_browser\The_oberoi_mumbai2.jpg" />
+    <Content Include="Images\hotel_img.jpg" />
+    <Content Include="Images\linus-mimietz-p3UWyaujtQo-unsplash.jpg" />
+    <Content Include="Images\logo-transparent-png.png" />
+    <Content Include="Images\logo-transparent-png2.png" />
+    <Content Include="Images\pexels-asman-chema-594077.jpg" />
+    <Content Include="Images\pexels-boonkong-boonpeng-1134176.jpg" />
+    <Content Include="Images\pexels-donald-tong-189296.jpg" />
+    <Content Include="Images\pexels-quark-studio-2506988.jpg" />
+    <Content Include="Images\pexels-zachary-debottis-1838640.jpg" />
+    <Content Include="Images\receptionists-work-elegant-suits.jpg" />
+    <Content Include="Images\roberto-nickson-rEJxpBskj3Q-unsplash.jpg" />
+    <Content Include="Images\staff.jpg" />
+    <Content Include="Images\staff2.jpg" />
+    <Content Include="Images\staff3.jpg" />
+    <Content Include="Images\type-entertainment-complex-popular-resort-with-pools-water-parks-turkey-with-more-than-5-million-visitors-year-amara-dolce-vita-luxury-hotel-resort-tekirova-kemer.jpg" />
+    <Content Include="img\about\about-1.jpg" />
+    <Content Include="img\about\about-2.jpg" />
+    <Content Include="img\about\about-p1.jpg" />
+    <Content Include="img\about\about-p2.jpg" />
+    <Content Include="img\about\about-p3.jpg" />
+    <Content Include="img\blog\blog-1.jpg" />
+    <Content Include="img\blog\blog-10.jpg" />
+    <Content Include="img\blog\blog-2.jpg" />
+    <Content Include="img\blog\blog-3.jpg" />
+    <Content Include="img\blog\blog-4.jpg" />
+    <Content Include="img\blog\blog-5.jpg" />
+    <Content Include="img\blog\blog-6.jpg" />
+    <Content Include="img\blog\blog-7.jpg" />
+    <Content Include="img\blog\blog-8.jpg" />
+    <Content Include="img\blog\blog-9.jpg" />
+    <Content Include="img\blog\blog-details\avatar\avatar-1.jpg" />
+    <Content Include="img\blog\blog-details\avatar\avatar-2.jpg" />
+    <Content Include="img\blog\blog-details\avatar\avatar-3.jpg" />
+    <Content Include="img\blog\blog-details\blog-details-1.jpg" />
+    <Content Include="img\blog\blog-details\blog-details-2.jpg" />
+    <Content Include="img\blog\blog-details\blog-details-3.jpg" />
+    <Content Include="img\blog\blog-details\blog-details-hero.jpg" />
+    <Content Include="img\blog\blog-wide.jpg" />
+    <Content Include="img\facebook_4494464.png" />
+    <Content Include="img\footer-logo.png" />
+    <Content Include="img\gallery\gallery-1.jpg" />
+    <Content Include="img\gallery\gallery-2.jpg" />
+    <Content Include="img\gallery\gallery-3.jpg" />
+    <Content Include="img\gallery\gallery-4.jpg" />
+    <Content Include="img\hero\hero-1.jpg" />
+    <Content Include="img\hero\hero-2.jpg" />
+    <Content Include="img\hero\hero-3.jpg" />
+    <Content Include="img\instagram_4494468.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\play.png" />
+    <Content Include="img\room\avatar\avatar-1.jpg" />
+    <Content Include="img\room\avatar\avatar-2.jpg" />
+    <Content Include="img\room\pexels-fotoaibe-1643383.jpg" />
+    <Content Include="img\room\pexels-jvdm-1457842.jpg" />
+    <Content Include="img\room\pexels-pixabay-259962.jpg" />
+    <Content Include="img\room\room-1.jpg" />
+    <Content Include="img\room\room-2.jpg" />
+    <Content Include="img\room\room-3.jpg" />
+    <Content Include="img\room\room-4.jpg" />
+    <Content Include="img\room\room-5.jpg" />
+    <Content Include="img\room\room-6.jpg" />
+    <Content Include="img\room\room-b1.jpg" />
+    <Content Include="img\room\room-b2.jpg" />
+    <Content Include="img\room\room-b3.jpg" />
+    <Content Include="img\room\room-b4.jpg" />
+    <Content Include="img\room\room-details.jpg" />
+    <Content Include="img\room\room10.jpg" />
+    <Content Include="img\room\room11.jpg" />
+    <Content Include="img\room\room12.jpg" />
+    <Content Include="img\room\room13.jpg" />
+    <Content Include="img\room\room14.jpg" />
+    <Content Include="img\room\room15.jpg" />
+    <Content Include="img\room\room16.jpg" />
+    <Content Include="img\room\room17.jpg" />
+    <Content Include="img\room\room18.jpg" />
+    <Content Include="img\room\room19.jpg" />
+    <Content Include="img\room\room20.jpg" />
+    <Content Include="img\room\room21.jpg" />
+    <Content Include="img\room\room22.jpg" />
+    <Content Include="img\room\room23.jpg" />
+    <Content Include="img\room\room24.jpg" />
+    <Content Include="img\room\room25.jpg" />
+    <Content Include="img\room\room26.jpg" />
+    <Content Include="img\room\room27.jpg" />
+    <Content Include="img\room\room28.jpg" />
+    <Content Include="img\room\room29.jpg" />
+    <Content Include="img\room\room30.jpg" />
+    <Content Include="img\room\room31.jpg" />
+    <Content Include="img\room\room32.jpg" />
+    <Content Include="img\room\room7.jpg" />
+    <Content Include="img\room\room8.jpg" />
+    <Content Include="img\room\room9.jpg" />
+    <Content Include="img\services\s-icon-1.png" />
+    <Content Include="img\social_49318.png" />
+    <Content Include="img\testimonial-logo.png" />
+    <Content Include="img\twitter_2168336.png" />
+    <Content Include="img\video-bg.jpg" />
+    <Content Include="img\Washrooms\washroom1.jpg" />
+    <Content Include="img\Washrooms\washroom10.jpg" />
+    <Content Include="img\Washrooms\washroom11.jpg" />
+    <Content Include="img\Washrooms\washroom12.jpg" />
+    <Content Include="img\Washrooms\washroom13.jpg" />
+    <Content Include="img\Washrooms\washroom14.jpg" />
+    <Content Include="img\Washrooms\washroom15.jpg" />
+    <Content Include="img\Washrooms\washroom16.jpg" />
+    <Content Include="img\Washrooms\washroom17.jpg" />
+    <Content Include="img\Washrooms\washroom18.jpg" />
+    <Content Include="img\Washrooms\washroom19.jpg" />
+    <Content Include="img\Washrooms\washroom2.jpg" />
+    <Content Include="img\Washrooms\washroom20.jpg" />
+    <Content Include="img\Washrooms\washroom22.jpg" />
+    <Content Include="img\Washrooms\washroom23.jpg" />
+    <Content Include="img\Washrooms\washroom24.jpg" />
+    <Content Include="img\Washrooms\washroom25.jpg" />
+    <Content Include="img\Washrooms\washroom3.jpg" />
+    <Content Include="img\Washrooms\washroom4.jpg" />
+    <Content Include="img\Washrooms\washroom5.jpg" />
+    <Content Include="img\Washrooms\washroom6.jpg" />
+    <Content Include="img\Washrooms\washroom7.jpg" />
+    <Content Include="img\Washrooms\washroom8.jpg" />
+    <Content Include="img\Washrooms\washroom9.jpg" />
+    <Content Include="img\youtube_1384012.png" />
+    <Content Include="Customer_Module\Index.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Customer_Module\user_login.aspx" />
+    <Content Include="Customer_Module\user_reg.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Admin_Master\wizard_page.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin_Master\Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\AdminHotel_details.aspx.cs">
+      <DependentUpon>AdminHotel_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\AdminHotel_details.aspx.designer.cs">
+      <DependentUpon>AdminHotel_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Adminmaster.Master.cs">
+      <DependentUpon>Adminmaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Adminmaster.Master.designer.cs">
+      <DependentUpon>Adminmaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_home.aspx.cs">
+      <DependentUpon>Admin_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_home.aspx.designer.cs">
+      <DependentUpon>Admin_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_hotels.aspx.cs">
+      <DependentUpon>Admin_hotels.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_hotels.aspx.designer.cs">
+      <DependentUpon>Admin_hotels.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_profile.aspx.cs">
+      <DependentUpon>Admin_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_profile.aspx.designer.cs">
+      <DependentUpon>Admin_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_reg.aspx.cs">
+      <DependentUpon>Admin_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Admin_reg.aspx.designer.cs">
+      <DependentUpon>Admin_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Facilities_details.aspx.cs">
+      <DependentUpon>Facilities_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Facilities_details.aspx.designer.cs">
+      <DependentUpon>Facilities_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Facilities_page.aspx.cs">
+      <DependentUpon>Facilities_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Facilities_page.aspx.designer.cs">
+      <DependentUpon>Facilities_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Pay_method.aspx.cs">
+      <DependentUpon>Pay_method.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Pay_method.aspx.designer.cs">
+      <DependentUpon>Pay_method.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Rooms_details.aspx.cs">
+      <DependentUpon>Rooms_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Rooms_details.aspx.designer.cs">
+      <DependentUpon>Rooms_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Rooms_page.aspx.cs">
+      <DependentUpon>Rooms_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Rooms_page.aspx.designer.cs">
+      <DependentUpon>Rooms_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Staff_details.aspx.cs">
+      <DependentUpon>Staff_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Staff_details.aspx.designer.cs">
+      <DependentUpon>Staff_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Staff_page.aspx.cs">
+      <DependentUpon>Staff_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Staff_page.aspx.designer.cs">
+      <DependentUpon>Staff_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Viewcustomer_booking.aspx.cs">
+      <DependentUpon>Viewcustomer_booking.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Viewcustomer_booking.aspx.designer.cs">
+      <DependentUpon>Viewcustomer_booking.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\Viewpayment_transaction.aspx.cs">
+      <DependentUpon>Viewpayment_transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\Viewpayment_transaction.aspx.designer.cs">
+      <DependentUpon>Viewpayment_transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\AboutUs_page.aspx.cs">
+      <DependentUpon>AboutUs_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\AboutUs_page.aspx.designer.cs">
+      <DependentUpon>AboutUs_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Booking_page.aspx.cs">
+      <DependentUpon>Booking_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Booking_page.aspx.designer.cs">
+      <DependentUpon>Booking_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Booking_payment.aspx.cs">
+      <DependentUpon>Booking_payment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Booking_payment.aspx.designer.cs">
+      <DependentUpon>Booking_payment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Browser.aspx.cs">
+      <DependentUpon>Browser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Browser.aspx.designer.cs">
+      <DependentUpon>Browser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Contact_page.aspx.cs">
+      <DependentUpon>Contact_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Contact_page.aspx.designer.cs">
+      <DependentUpon>Contact_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\feedbackmessage.aspx.cs">
+      <DependentUpon>feedbackmessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\feedbackmessage.aspx.designer.cs">
+      <DependentUpon>feedbackmessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Hotel_details.aspx.cs">
+      <DependentUpon>Hotel_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Hotel_details.aspx.designer.cs">
+      <DependentUpon>Hotel_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Newoffer_page.aspx.cs">
+      <DependentUpon>Newoffer_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Newoffer_page.aspx.designer.cs">
+      <DependentUpon>Newoffer_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\RoomSelect_page.aspx.cs">
+      <DependentUpon>RoomSelect_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\RoomSelect_page.aspx.designer.cs">
+      <DependentUpon>RoomSelect_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Thankyou_page.aspx.cs">
+      <DependentUpon>Thankyou_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Thankyou_page.aspx.designer.cs">
+      <DependentUpon>Thankyou_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\user_profile.aspx.cs">
+      <DependentUpon>user_profile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\user_profile.aspx.designer.cs">
+      <DependentUpon>user_profile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\Viewbooking_page.aspx.cs">
+      <DependentUpon>Viewbooking_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Viewbooking_page.aspx.designer.cs">
+      <DependentUpon>Viewbooking_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Customer_Module\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\user_login.aspx.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\user_login.aspx.designer.cs">
+      <DependentUpon>user_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer_Module\user_reg.aspx.cs">
+      <DependentUpon>user_reg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer_Module\user_reg.aspx.designer.cs">
+      <DependentUpon>user_reg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_Master\wizard_page.aspx.cs">
+      <DependentUpon>wizard_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin_Master\wizard_page.aspx.designer.cs">
+      <DependentUpon>wizard_page.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Admin_Master\Adminmaster.Master" />
+    <None Include="Customer_Module\packages.config" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Customer_Module\Site1.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55269</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44380/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
